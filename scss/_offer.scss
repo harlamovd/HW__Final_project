@@ -1,0 +1,68 @@
+.offer {
+  text-align: center;
+  display: block;
+  z-index: 2;
+  position: relative;
+  block-size: border-box;
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 437px;
+    height: 600px;
+    top: 0;
+    left: 50%;
+    transform: translate(-60%, 0);
+    background: url("../img/symbol_h.svg") no-repeat;
+    z-index: -1;
+    @media screen and (min-width: 768px) {
+      width: 746px;
+      height: 1024px;
+      background-size: cover;
+    }
+    @media screen and (min-width: 1024px) {
+      width: 560px;
+      height: 768px;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    color: #FFFFFF;
+    margin: 0;
+    padding-top: 231px;
+    padding-bottom: 159px;
+    position: relative;
+    z-index: 2;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 489px;
+      padding-bottom: 417px;
+    }
+    @media screen and (min-width: 1024px) {
+      padding-top: 362px;
+      padding-bottom: 289px;
+    }
+  }
+  &__bottom {
+    margin: 0 auto 30px;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+
+    &:hover {
+      border-color: var(--color-accent);
+      path {
+        stroke: var(--color-accent);
+      }
+    }
+
+  }
+}

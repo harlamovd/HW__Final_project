@@ -1,0 +1,119 @@
+.command_bloc {
+  display: grid;
+  grid-template-columns: minmax(255px, 500px);
+  grid-template-rows: auto auto;
+  justify-content: center;
+  margin: 60px 30px 0;
+  @media screen and (min-width: 768px) {
+    grid-template-columns: minmax(255px, 648px);
+  }
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: minmax(255px, 904px);
+  }
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: minmax(255px, 1320px);
+  }
+  @media screen and (min-width: 1920px) {
+    grid-template-columns: minmax(255px, 1600px)
+  }
+
+  &__radio {
+    display: none;
+  }
+  &__switch {
+    grid-row: 2 / 3;
+    display: inline-flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+
+  &__label {
+    display: inline-block;
+    color: #006CCF;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: var(--color-active-regular);
+    opacity: 0.2;
+    &:hover {
+      opacity: 0.6;
+    }
+
+  }
+
+  &__content {
+    grid-row: 1 / 2;
+    background: #F5F5FA;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+
+.command_bloc_card {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: 400px 504px;
+    align-items: center;
+  }
+  @media screen and (min-width: 1440px) {
+    grid-template-columns: 400px 1fr;
+  }
+  &__photo {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    & img {
+      width: 500px;
+      height: 500px;
+      @media screen and (min-width: 768px) {
+        width: 100%;
+        height: 100%;
+      }
+      @media screen and (min-width: 1024px) {
+        width: auto;
+        height: 528px;
+      }
+      @media screen and (min-width: 1440px) {
+        width: 400px;
+        height: 400px;
+      }
+    }
+  }
+  &__content {
+    padding: 30px;
+  }
+  &__quote {
+    font-size: 30px;
+    line-height: 37px;
+    padding-top: 5px;
+    @media screen and (min-width: 768px) {
+      font-size: 38px;
+      line-height: 46px;
+    }
+  }
+  &__employee {
+    color: var(--color-grey-text);
+    margin-top: 30px;
+    margin-bottom: 6px;
+  }
+  &__post {
+    color: var(--color-grey-text);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+}
+#com_r_1:checked ~.command_bloc__switch #com_l_1,
+#com_r_2:checked ~.command_bloc__switch #com_l_2,
+#com_r_3:checked ~.command_bloc__switch #com_l_3, {
+  opacity: 1;
+}
+#com_r_1:checked ~.command_bloc__content #com_c_1,
+#com_r_2:checked ~.command_bloc__content #com_c_2,
+#com_r_3:checked ~.command_bloc__content #com_c_3, {
+  display: grid;
+}
