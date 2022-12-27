@@ -1,0 +1,113 @@
+@import "normalize";
+@import "fonts";
+@import "vars";
+@import "main";
+@import "header";
+@import "publications_bloc";
+@import "footer";
+
+.services_section {
+  display: grid;
+  grid-template-columns: minmax(auto, 500px);
+  grid-template-rows: auto;
+  justify-content: center;
+  text-align: center;
+  padding: 132px 30px 60px 30px;
+  row-gap: 28px;
+  @media screen and (min-width: 768px) {
+    padding: 280px 60px 60px 60px;
+    grid-template-columns: auto;
+  }
+  @media screen and (min-width: 1024px) {
+    padding: 176px 60px 60px 60px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding: 176px 180px 60px 180px;
+  }
+  @media screen and (min-width: 1920px) {
+    padding: 176px 280px 60px 280px;
+  }
+
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 92px;
+    height: 92px;
+    border-radius: 24px;
+    background: #FFFFFF;
+    margin: 0 auto;
+  }
+  &__title_link {
+
+  }
+  &__title {
+    font-size: 30px;
+    line-height: 37px;
+    @media screen and (min-width: 768px) {
+      font-size: 38px;
+      line-height: 46px;
+    }
+
+  }
+  &__desc {
+    font-size: 19px;
+    line-height: 30px;
+    color: #FFFFFF;
+
+  }
+  &__specific_desc {
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      column-gap: 30px;
+      margin-top: 30px;
+      @media screen and (min-width: 1440px) {
+        column-gap: 60px;
+      }
+
+    }
+  }
+  &__specific_title {
+    padding-top: 30px;
+    margin: 0;
+    color: #FFFFFF;
+    text-align: start;
+    border-top: 4px solid rgba(255, 255, 255, 0.5);
+    @media screen and (min-width: 768px) {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+    }
+  }
+  &__specific_list {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-left: 18px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin: 0;
+    @media screen and (min-width: 768px) {
+      grid-template-columns: 294px 294px;
+      column-gap: 60px;
+    }
+  }
+  &__specific_element {
+    text-align: start;
+    font-size: 18px;
+    line-height: 26px;
+    color: #FFFFFF;
+    &::marker {
+      color: var(--color-accent);
+    }
+  }
+}
+.space {
+  height: 60px;
+}
+.publications_bloc {
+border-radius: 12px 12px 0 0;
+}

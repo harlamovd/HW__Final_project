@@ -1,4 +1,6 @@
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Montserrat',sans-serif;
   display: grid;
@@ -248,6 +250,33 @@ a {
   }
   &:hover:after {
     border-color: var(--color-accent);
+  }
+}
+.button {
+  box-sizing: border-box;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+  height: 56px;
+  background: var(--color-active-regular);
+  color: #FFFFFF;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  &:hover {
+    color: #FFFFFF;
+    background: var(--color-active-hover);
+  }
+  &:active {
+    color: #FFFFFF;
+    background: var(--color-active-active);
+
+  }
+  &-services_section {
+      width: fit-content;
+      margin: 0 auto;
   }
 }
 /*general classes*/
